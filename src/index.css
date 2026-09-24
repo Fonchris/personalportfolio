@@ -41,7 +41,7 @@ html:not(.dark) .theme-knob { transform: translateX(29px); background: #151712; 
 .hero17-orb-left { top: -150px; left: -100px; background: #99f6e4; }
 .hero17-orb-right { right: -120px; bottom: -180px; background: #6ee7b7; }
 .hero17-sheen { width: 45%; left: -45%; background: linear-gradient(110deg, transparent, rgba(255, 255, 255, .28), transparent); filter: blur(18px); transform: skewX(-18deg); }
-.hero17-mouse-glow { z-index: -1; opacity: .85; }
+.hero17-mouse-glow { z-index: -1; opacity: .4; }
 .hero17-content { max-width: 860px; margin: auto; }
 .hero17-kicker { display: inline-block; margin-bottom: 24px; padding: 8px 14px; border: 1px solid rgba(13, 148, 136, .25); border-radius: 999px; background: rgba(240, 253, 250, .72); color: #0f766e; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
 .hero17-content h2 { color: #073b38; font-size: clamp(42px, 7vw, 82px); font-weight: 700; line-height: 1.05; letter-spacing: -.06em; }

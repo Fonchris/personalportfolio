@@ -23,13 +23,21 @@ export default function Hero17() {
     mouseY.set(event.clientY - top)
   }
 
+  const mouseGlow = useMotionTemplate`
+    radial-gradient(
+      400px circle at ${mouseX}px ${mouseY}px,
+      rgba(45, 212, 191, 0.15),
+      transparent 80%
+    )
+  `
+
   return (
     <section ref={heroRef} onMouseMove={handleMouseMove} className="hero17-section">
       <HeroBackground />
       <motion.div
         className="hero17-mouse-glow"
         style={{
-          background: useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(45, 212, 191, 0.18), transparent 80%)`,
+          background: mouseGlow,
         }}
       />
       <motion.div initial="hidden" animate="visible" variants={fadeInUp} custom={0} className="hero17-content">
