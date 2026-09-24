@@ -85,7 +85,6 @@ export default function PortfolioHero() {
               </div>
             )}
           </div>
-          <a className="signature" href="#home" aria-label="Fon Chris Bright Pemmeenyi">F</a>
           <button className="theme-toggle" type="button" aria-label="Toggle theme" onClick={() => setIsDark(!isDark)}>
             <span className="theme-knob" />
           </button>
