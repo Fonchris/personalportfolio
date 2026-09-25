@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowDownRight, ChevronDown, Mail, Menu, Phone, X } from 'lucide-react'
+import { ChevronDown, Mail, Menu, Phone, X } from 'lucide-react'
 import { FaGithub, FaLinkedinIn, FaTiktok } from 'react-icons/fa6'
 import heroImage from '@/assets/heroimage.jpeg'
 import Hero17 from '@/components/ui/hero-17'
+import { ProjectShowcase } from '@/components/ui/project-showcase'
 
 type BlurTextProps = {
   text: string
@@ -123,11 +124,7 @@ export default function PortfolioHero() {
 
         <section id="work" className="content-section work-section">
           <div className="section-heading"><p className="eyebrow">02 / WHAT I DO</p><span>Selected disciplines</span></div>
-          <div className="discipline-list">
-            {['Software engineering', 'Graphic design', 'Video editing', 'Mobile applications'].map((item, index) => (
-              <div className="discipline" key={item}><span>0{index + 1}</span><h3>{item}</h3><ArrowDownRight size={28} /></div>
-            ))}
-          </div>
+          <ProjectShowcase />
         </section>
 
         <section id="contact" className="contact-section">
