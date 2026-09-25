@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { ChevronDown, Mail, Menu, Phone, X } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedinIn, FaTiktok } from 'react-icons/fa6'
 import heroImage from '@/assets/heroimage.jpeg'
 import Hero17 from '@/components/ui/hero-17'
@@ -128,14 +129,29 @@ export default function PortfolioHero() {
         </section>
 
         <section id="contact" className="contact-section">
-          <p className="eyebrow">03 / LET&apos;S WORK TOGETHER</p>
-          <h2>Have an idea?<br /><em>Make it real.</em></h2>
-          <div className="contact-links">
-            <a href="mailto:pemmenyif@gmail.com"><Mail size={18} />pemmenyif@gmail.com</a>
-            <a href="tel:+237677684842"><Phone size={18} />+237 677 684 842</a>
-            <a href="https://github.com/Fonchris" target="_blank" rel="noreferrer"><FaGithub aria-hidden="true" />GitHub</a>
-            <a href="https://www.linkedin.com/in/fon-chris-bright-pemmenyi-2aa328262/" target="_blank" rel="noreferrer"><FaLinkedinIn aria-hidden="true" />LinkedIn</a>
-            <a href="https://www.tiktok.com/@orientaa1" target="_blank" rel="noreferrer"><FaTiktok aria-hidden="true" />TikTok</a>
+          <div className="contact-layout">
+            <div className="contact-copy">
+              <p className="eyebrow">03 / LET&apos;S WORK TOGETHER</p>
+              <h2>Have an idea?<br /><em>Make it real.</em></h2>
+              <div className="contact-links">
+                <a href="mailto:pemmenyif@gmail.com"><Mail size={18} />pemmenyif@gmail.com</a>
+                <a href="tel:+237677684842"><Phone size={18} />+237 677 684 842</a>
+                <a href="https://github.com/Fonchris" target="_blank" rel="noreferrer"><FaGithub aria-hidden="true" />GitHub</a>
+                <a href="https://www.linkedin.com/in/fon-chris-bright-pemmenyi-2aa328262/" target="_blank" rel="noreferrer"><FaLinkedinIn aria-hidden="true" />LinkedIn</a>
+                <a href="https://www.tiktok.com/@orientaa1" target="_blank" rel="noreferrer"><FaTiktok aria-hidden="true" />TikTok</a>
+              </div>
+            </div>
+            <motion.div
+              className="contact-image-wrap"
+              initial={{ opacity: 0, x: 70, rotate: 8 }}
+              whileInView={{ opacity: 1, x: 0, rotate: 3 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              animate={{ y: [0, -12, 0], rotate: [3, 5, 3] }}
+            >
+              <img src={heroImage} alt="Fon Chris Bright Pemmeenyi" />
+              <span>Let&apos;s create something<br />worth remembering.</span>
+            </motion.div>
           </div>
         </section>
       </main>
